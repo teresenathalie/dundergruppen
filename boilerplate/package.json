@@ -17,6 +17,10 @@
     "typescript": "^4.2.4"
   },
   "dependencies": {
+<<<<<<< HEAD
+=======
+    "easytimer": "^1.1.1",
+>>>>>>> origin/musse
     "easytimer.js": "^4.3.4"
   }
 }
