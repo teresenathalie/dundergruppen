@@ -1,4 +1,3 @@
-import * as abortTimer from './abortTimer';
 
 
 function render(timer: any, msg?: String): string {
@@ -10,11 +9,16 @@ function render(timer: any, msg?: String): string {
         temp = `<h1>${timer.getTimeValues().minutes}:${timer.getTimeValues().seconds}</h1>`
     }
     let template: string = `
-    <section id="timer-digital">
+    <section id="timer-digital class="show">
     ${temp}
-    </section> <section id="timer-digital">
+    </section> 
+   
     <section id="abort-section">
     <button id="abort-btn">Abort timer</button>
+    </section>
+
+    <section id="start-section">
+    <button id="start-btn">START TIMER</button>
     </section>
   
     `;
