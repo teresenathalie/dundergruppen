@@ -45,15 +45,24 @@ button[data-setter]:hover {
     margin-top: 7em;
 }
 
-#controlls {
+#controlls #timer {
     /* position: absolute; */
     /* left: 75px;
     top: 105px; */
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    text-align: center;
+}
+#timer h3{
+    font-size: 2em;
+    opacity: .7;
+}
+#timer article{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
 }
 
 .display-remain-time {
@@ -142,8 +151,9 @@ body {
     min-height: 100vh;
 }
 
-#img {
+#one #img {
     margin: 20em auto auto 45%;
+    cursor: pointer;
 }
 
 #alarm {

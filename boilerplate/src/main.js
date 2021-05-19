@@ -73,6 +73,8 @@ function timer (seconds){ //counts time, takes seconds
       });
       document.getElementById('alarm').style.display= 'block'
       document.getElementById('two').style.display= 'none'
+      document.getElementById("ljud").play();
+
       displayTimeLeft(wholeTime);
       pauseBtn.classList.remove('pause');
       pauseBtn.classList.add('play');
