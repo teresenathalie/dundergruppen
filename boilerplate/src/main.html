@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="pages.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EasyTimer</title>
+  </head>
+
+  <body>
+    <!-- <div class="setters">
+        <div class="minutes-set">
+          <button data-setter="minutes-plus">+</button>
+          <button data-setter="minutes-minus">-</button>
+        </div> -->
+    <section id="one">
+      <img id="img" src="./img/home.svg" alt="home" />
+    </section>
+    <button id='digital'> timer digital</button>
+    <button id="analog">timer analog</button>
+    <section id="two" style="display: none">
+      <div class="seconds-set" id="sitTimer">
+        <button data-setter="seconds-plus"><</button>
+        <button data-setter="seconds-minus">></button>
+      </div>
+
+      <div id="circle" style="display: none">
+        <svg
+          width="300"
+          viewBox="0 0 220 220"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g transform="translate(110,110)">
+            <circle r="100" class="e-c-base" />
+            <g transform="rotate(-90)">
+              <circle r="100" class="e-c-progress" />
+
+              <g id="e-pointer">
+                <circle cx="100" cy="0" r="8" class="e-c-pointer" />
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <div id="controlls">
+        <section id="timer" >
+          <div class="display-remain-time">00:30</div>
+        </section>
+        
+        <section id='play'>
+          <button class="play" id="pause"></button>
+        </section>
+      </div>
+    </section>
+
+    <section id="alarm" style="display: none">
+      <img src="./img/alaram.svg" alt="alarm" />
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>
