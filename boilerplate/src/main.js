@@ -128,7 +128,7 @@ pauseBtn.addEventListener('click',pauseTimer);
 
 
 // meny show and close 
-document.getElementById("meny").style.display = "none";
+  document.getElementById("meny").style.display = "none";
 function w3_open() {
   if(true){ 
   document.getElementById('pause').style.border = "none";
@@ -143,36 +143,43 @@ function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
 }
 
-//Show page one
-document.getElementById("bFour").addEventListener('click', ()=>{
+//Show page one(loading)
+ document.getElementById("bFour").addEventListener('click', ()=>{
   document.getElementById('four').style.display= 'none';
   document.getElementById('one').style.display= 'block';
   location.reload()
   
 })
 
-//Show page two 
-document.getElementById('img').addEventListener('click', ()=>{
+//Show page two (sitTimer)
+ document.getElementById('img').addEventListener('click', ()=>{
  document.getElementById('one').style.display= 'none';
  document.getElementById('two').style.display= 'block';
  document.getElementById('controlls').style.display= 'block';
 })
 
-//Show page tree
-document.getElementById('interval').addEventListener('click', ()=>{
+//Show page tree(menu)
+  document.getElementById('interval').addEventListener('click', ()=>{
   document.getElementById('two').style.display= 'none';
   document.getElementById('tre').style.display= 'block';
   document.getElementById('inp').style.display= 'none';
   document.getElementById('controlls').style.display= 'none';
 })
 
- 
-//Show page four
+//Show page four(tiditalTimer)
 document.querySelector('.digital').addEventListener('click', ()=>{
   document.getElementById('tre').style.display= 'none';
   document.getElementById('four').style.display= 'block';
-   document.getElementById('inp').style.display= 'none';
-   document.getElementById('controlls').style.display= 'block';
+  document.getElementById('inp').style.display= 'none';
+  document.getElementById('controlls').style.display= 'block';
+})
+
+//Show page five(analogTimer)
+  document.querySelector('.analog').addEventListener('click', ()=>{
+  document.getElementById('tre').style.display= 'none';
+  document.getElementById('four').style.display= 'block';
+  document.getElementById('inp').style.display= 'none';
+  document.getElementById('controlls').style.display= 'block';
 })
 
 
