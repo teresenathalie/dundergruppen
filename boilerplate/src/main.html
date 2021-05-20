@@ -12,12 +12,12 @@
   <body>
     
     
-  <!-- Page one -->
+  <!-- Page one (loading) -->
   <section id="one">
     <img id="img" src="./img/home.svg" alt="home" />
   </section>
 
-  <!-- Page two -->
+  <!-- Page two (setTimer del-1)-->
   <section id="two" style="display: none">
     <div class="seconds-set">
       <button data-setter="seconds-minus">
@@ -29,7 +29,7 @@
     </div>
   </section>
 
-  <!-- Page tree -->
+  <!-- Page tree (menu) -->
   <section id="tre" style="display: none">
     <div onclick="w3_open()">
       <img src="./img/meny.svg" alt="meny" />
@@ -44,20 +44,30 @@
     </article>
   </section>
 
-  <!-- Page four -->
+  <!-- Page four (digitalTimer)-->
   <section id="four" style="display: none">
     <img src="./img/meny.svg" alt="meny" />
     <button id="bFour">Abort timer</button>
   </section>
 
-  <!-- Page fem -->
-  <section id="alarm" style="display: none">
-    <img src="./img/alarm.svg" alt="alarm" />
-    <audio src="./img/alarm.mp3" id="ljud"></audio>
-  </section>
+  
+    <!-- Page five (analogTimer) -->
+    <div id="circle" style="display: none">
+      <svg width="300" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(110,110)">
+          <circle r="100" class="e-c-base" />
+          <g transform="rotate(-90)">
+            <circle r="100" class="e-c-progress" />
 
+            <g id="e-pointer">
+              <circle cx="100" cy="0" r="8" class="e-c-pointer" />
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
 
-  <!-- Digital timer -->
+  <!--sitTimer(del-2) on page two-->
   <section id="controlls" style="display: none">
     <section class="timer">
       <div class="display-remain-time">00:30</div>
@@ -79,21 +89,23 @@
         <button id='interval'>START TIMER</button>
       </div>
     </section>
-    <!-- Analog timer -->
-    <div id="circle" style="display: none">
-      <svg width="300" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
-        <g transform="translate(110,110)">
-          <circle r="100" class="e-c-base" />
-          <g transform="rotate(-90)">
-            <circle r="100" class="e-c-progress" />
 
-            <g id="e-pointer">
-              <circle cx="100" cy="0" r="8" class="e-c-pointer" />
-            </g>
-          </g>
-        </g>
-      </svg>
-    </div>
+  <!-- Page sex (visualTimer)-->
+  <section>
+
+  </section>
+    
+  <!-- Page seven (viewAlarm)-->
+  <section id="alarm" style="display: none">
+    <img src="./img/alarm.svg" alt="alarm" />
+    <audio src="./img/alarm.mp3" id="ljud"></audio>
+  </section>
+
+    <!-- Page eight (view break)-->
+    <section>
+
+    </section>
+
     <script src="main.js"></script>
   </body>
 </html>

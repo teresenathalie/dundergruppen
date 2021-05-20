@@ -143,6 +143,10 @@ button[data-setter]:hover {
   margin: 1.7em 0 3.3em 2em;
 }
 
+ul #analog {
+  margin-top: .7em;
+}
+
 ul {
   margin-left: 2em;
 }
