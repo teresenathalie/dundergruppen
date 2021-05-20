@@ -20,7 +20,7 @@ const setterBtns = document.querySelectorAll('button[data-setter]');
 
 let intervalTimer;
 let timeLeft;
-let wholeTime = 0.5 * 20; // manage this to set the whole time 
+let wholeTime = 0.5 * 10; // manage this to set the whole time 
 let isPaused = false;
 let isStarted = false;
 
@@ -137,6 +137,12 @@ function w3_open() {
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
 }
+
+//Show page one
+document.getElementById('four').addEventListener('click', ()=>{
+  document.getElementById('four').style.display= 'none';
+  document.getElementById('one').style.display= 'block';
+})
 
 //Show page two 
 document.getElementById('img').addEventListener('click', ()=>{
