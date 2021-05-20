@@ -130,8 +130,13 @@ pauseBtn.addEventListener('click',pauseTimer);
 // meny show and close 
 document.getElementById("meny").style.display = "none";
 function w3_open() {
+  if(true){ 
+  document.getElementById('pause').style.border = "none";
+  document.getElementById('pause').style.fontSize = '1.5em';
+  document.getElementById('pause').style.padding = '0';
   document.getElementById("mySidebar").style.display = "block";
   document.getElementById("meny").style.display = "block";
+  }
 }
 
 function w3_close() {
@@ -139,9 +144,11 @@ function w3_close() {
 }
 
 //Show page one
-document.getElementById('four').addEventListener('click', ()=>{
+document.getElementById("bFour").addEventListener('click', ()=>{
   document.getElementById('four').style.display= 'none';
   document.getElementById('one').style.display= 'block';
+  location.reload()
+  
 })
 
 //Show page two 
