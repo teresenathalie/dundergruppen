@@ -3,12 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="main.css" />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 462ac35982af571ed0ba7df5de0204f6239dacdf
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EasyTimer</title>
   </head>
 
   <body>
+<<<<<<< HEAD
     <!-- <div class="setters">
         <div class="minutes-set">
           <button data-setter="minutes-plus">+</button>
@@ -35,15 +40,54 @@
             <circle r="100" class="e-c-base" />
             <g transform="rotate(-90)">
               <circle r="100" class="e-c-progress" />
+=======
+    
+    
+  <!-- Page one -->
+  <section id="one">
+    <img id="img" src="./img/home.svg" alt="home" />
+  </section>
 
-              <g id="e-pointer">
-                <circle cx="100" cy="0" r="8" class="e-c-pointer" />
-              </g>
-            </g>
-          </g>
-        </svg>
-      </div>
+  <!-- Page two -->
+  <section id="two" style="display: none">
+    <div class="seconds-set">
+      <button data-setter="seconds-minus">
+        <img src="./img/minus.svg" alt="m" />
+      </button>
+      <button data-setter="seconds-plus">
+        <img src="./img/plus.svg" alt="p" />
+      </button>
+    </div>
+  </section>
+>>>>>>> 462ac35982af571ed0ba7df5de0204f6239dacdf
 
+  <!-- Page tree -->
+  <section id="tre" style="display: none">
+    <div onclick="w3_open()">
+      <img src="./img/meny.svg" alt="meny" />
+    </div>
+
+    <article id="mySidebar">
+      <ul onclick="w3_close()" id="meny">
+        <li class="digital" id="pause">Digital timer</li>
+        <li id="analog">Analog timer</li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- Page four -->
+  <section id="four" style="display: none">
+    <img src="./img/meny.svg" alt="meny" />
+    <button id="four">Abort rimer</button>
+  </section>
+
+  <!-- Page fem -->
+  <section id="alarm" style="display: none">
+    <img src="./img/alarm.svg" alt="alarm" />
+    <audio src="./img/alarm.mp3" id="ljud"></audio>
+  </section>
+
+<<<<<<< HEAD
       <div id="controlls">
         <section id="timer">
           <div class="display-remain-time">00:30</div>
@@ -57,8 +101,49 @@
 
     <section id="alarm" style="display: none">
       <img src="./img/alarm.svg" alt="alarm" />
-    </section>
+=======
 
+  <!-- Digital timer -->
+  <section id="controlls" style="display: none">
+    <section class="timer">
+      <div class="display-remain-time">00:30</div>
+      <div id="inp">
+        <span>Minutes</span>
+        <br />
+        <br />
+        <article>
+          <aside>
+            <input type="checkbox" />
+            <span>intervals</span>
+          </aside>
+          <aside>
+            <input type="checkbox" />
+            <span>5 min break/interval</span>
+          </aside>
+        </article>
+        <br /><br />
+        <button id='interval'>START TIMER</button>
+      </div>
+>>>>>>> 462ac35982af571ed0ba7df5de0204f6239dacdf
+    </section>
+    <!-- Analog timer -->
+    <div id="circle" style="display: none">
+      <svg width="300" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(110,110)">
+          <circle r="100" class="e-c-base" />
+          <g transform="rotate(-90)">
+            <circle r="100" class="e-c-progress" />
+
+<<<<<<< HEAD
+=======
+            <g id="e-pointer">
+              <circle cx="100" cy="0" r="8" class="e-c-pointer" />
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+>>>>>>> 462ac35982af571ed0ba7df5de0204f6239dacdf
     <script src="main.js"></script>
   </body>
 </html>

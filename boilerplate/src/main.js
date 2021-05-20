@@ -1,4 +1,4 @@
-//circle start
+// //circle start
 let progressBar = document.querySelector('.e-c-progress');
 let indicator = document.getElementById('e-indicator');
 let pointer = document.getElementById('e-pointer');
@@ -17,11 +17,13 @@ const displayOutput = document.querySelector('.display-remain-time')
 const pauseBtn = document.getElementById('pause');
 const setterBtns = document.querySelectorAll('button[data-setter]');
 
+
 let intervalTimer;
 let timeLeft;
 let wholeTime = 0.5 * 20; // manage this to set the whole time 
 let isPaused = false;
 let isStarted = false;
+
 
 
   
@@ -71,8 +73,13 @@ function timer (seconds){ //counts time, takes seconds
         btn.disabled = false;
         btn.style.opacity = 1;
       });
-      document.getElementById('alarm').style.display= 'block'
-      document.getElementById('two').style.display= 'none'
+      document.getElementById('alarm').style.display= 'block';
+      document.getElementById('two').style.display= 'none';
+      document.getElementById('tre').style.display= 'none';
+      document.getElementById('four').style.display= 'none';
+      document.getElementById('controlls').style.display= 'none';
+      document.getElementById("ljud").play();
+
       displayTimeLeft(wholeTime);
       pauseBtn.classList.remove('pause');
       pauseBtn.classList.add('play');
@@ -117,23 +124,43 @@ function displayTimeLeft (timeLeft){ //displays time on the input
   displayOutput.textContent = displayString;
   update(timeLeft, wholeTime);
 }
-
 pauseBtn.addEventListener('click',pauseTimer);
 
 
+// meny show and close 
+document.getElementById("meny").style.display = "none";
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("meny").style.display = "block";
+}
 
-//Show & display pages one => two
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+//Show page two 
 document.getElementById('img').addEventListener('click', ()=>{
- document.getElementById('one').style.display= 'none'
- document.getElementById('two').style.display= 'block'
- document.getElementById('play').style.display= 'none'
+ document.getElementById('one').style.display= 'none';
+ document.getElementById('two').style.display= 'block';
+ document.getElementById('controlls').style.display= 'block';
 })
 
-document.getElementById('digital').addEventListener('click', ()=>{
-  document.getElementById('sitTimer').style.display= 'none'
-  document.getElementById('timer').style.display= 'block'
-  document.getElementById('play').style.display= 'block'
- })
+//Show page tree
+document.getElementById('interval').addEventListener('click', ()=>{
+  document.getElementById('two').style.display= 'none';
+  document.getElementById('tre').style.display= 'block';
+  document.getElementById('inp').style.display= 'none';
+  document.getElementById('controlls').style.display= 'none';
+})
+
+ 
+//Show page four
+document.querySelector('.digital').addEventListener('click', ()=>{
+  document.getElementById('tre').style.display= 'none';
+  document.getElementById('four').style.display= 'block';
+   document.getElementById('inp').style.display= 'none';
+   document.getElementById('controlls').style.display= 'block';
+})
 
 
 
