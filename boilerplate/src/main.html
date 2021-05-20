@@ -9,23 +9,20 @@
   </head>
 
   <body>
-    <!-- <div class="setters">
-        <div class="minutes-set">
-          <button data-setter="minutes-plus">+</button>
-          <button data-setter="minutes-minus">-</button>
-        </div> -->
+  
     <section id="one">
       <img id="img" src="./img/home.svg" alt="home" />
     </section>
     <button id="digital">timer digital</button>
     <button id="analog">timer analog</button>
+    
     <section id="two" style="display: none">
       <div class="seconds-set" id="sitTimer">
-        <button data-setter="seconds-plus"><</button>
-        <button data-setter="seconds-minus">></button>
+        <button data-setter="seconds-minus"><</button>
+        <button data-setter="seconds-plus">></button>
       </div>
 
-      <div id="circle">
+      <div id="circle" style="display: none;">
         <svg
           width="300"
           viewBox="0 0 220 220"
@@ -47,6 +44,19 @@
       <div id="controlls">
         <section id="timer">
           <div class="display-remain-time">00:30</div>
+          <h3>Seconds</h3>
+          <article>
+            <aside>
+              <input type="checkbox" />
+              <span>intervals</span>
+            </aside>
+            <aside>
+              <input type="checkbox" />
+              <span>5 min break/interval</span>
+            </aside>
+          </article>
+          <br>
+          <button>START TIMER</button>
         </section>
 
         <section id="play">
@@ -57,6 +67,7 @@
 
     <section id="alarm" style="display: none">
       <img src="./img/alarm.svg" alt="alarm" />
+      <audio src="./img/alarm.mp3" id="ljud"></audio>
     </section>
 
     <script src="main.js"></script>

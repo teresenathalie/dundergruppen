@@ -62,7 +62,7 @@ function timer (seconds){ //counts time, takes seconds
   let remainTime = Date.now() + (seconds * 1000);
   displayTimeLeft(seconds);
   
-  intervalTimer = setInterval(function(){
+  intervalTimer = setInterval(function() {
     timeLeft = Math.round((remainTime - Date.now()) / 1000);
     if(timeLeft < 0){
       clearInterval(intervalTimer);
@@ -73,6 +73,8 @@ function timer (seconds){ //counts time, takes seconds
       });
       document.getElementById('alarm').style.display= 'block'
       document.getElementById('two').style.display= 'none'
+      document.getElementById("ljud").play();
+
       displayTimeLeft(wholeTime);
       pauseBtn.classList.remove('pause');
       pauseBtn.classList.add('play');
