@@ -1,5 +1,5 @@
 // //circle start
-let progressBar = document.querySelector('.e-c-progress');
+const progressBar = document.querySelector('.e-c-progress');
 let indicator = document.getElementById('e-indicator');
 let pointer = document.getElementById('e-pointer');
 let background = document.getElementById('six');
