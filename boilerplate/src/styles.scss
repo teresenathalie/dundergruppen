@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< .merge_file_a23256
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 
@@ -15,6 +16,8 @@ $white: #FFFFFF;
 $radiusCheckbox: 3px;
 $radiusBigbutton: 5px;
 $radiusSmallbutton: 2px;
+=======
+>>>>>>> 1831a5c80edeb77c70b221e7a56dffc9241a4ff2
 
 #msg{
     background: #333;
@@ -29,21 +32,51 @@ $radiusSmallbutton: 2px;
 opacity: 1;
 }
 
+<<<<<<< HEAD
+=======
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+:root {
+    font-family: 'PT Sans', sans-serif;
+}
+
+$black: #000;
+$darkgrey: #222222;
+$lightgrey: #E5E5E5;
+$white: #FFFFFF;
+
+$radiusCheckbox: 3px;
+$radiusBigbutton: 5px;
+$radiusSmallbutton: 2px;
+
+
+
+>>>>>>> 1831a5c80edeb77c70b221e7a56dffc9241a4ff2
 button[data-setter] {
     outline: none;
     background: transparent;
     border: none;
+<<<<<<< HEAD
     font-family: 'PT Sans', sans-serif;
+=======
+    font-family: 'Roboto';
+>>>>>>> 1831a5c80edeb77c70b221e7a56dffc9241a4ff2
     font-weight: 900;
     font-size: 3em;
     color: #222;
     cursor: pointer;
+<<<<<<< HEAD
+=======
+    /* width: 25px;
+    height: 30px; */
+>>>>>>> 1831a5c80edeb77c70b221e7a56dffc9241a4ff2
   }
   
   button[data-setter]:hover {
     opacity: 0.5;
   }
   
+<<<<<<< HEAD
   #circle svg {
     top: 10%;
     left: 40%;
@@ -71,6 +104,28 @@ button#loading2 {
     line-height: 20,72px;
     position: relative;
 }
+=======
+  /* 
+  .setters {
+    position: absolute;
+    left: 85px;
+    top: 75px;
+  } */
+  
+  /* 
+  .minutes-set {
+    float: left;
+    margin-right: 28px;
+  } */
+  
+  #circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    /* position: relative; */
+  }
+>>>>>>> 1831a5c80edeb77c70b221e7a56dffc9241a4ff2
   
   .seconds-set {
     display: flex;
@@ -81,7 +136,10 @@ button#loading2 {
   
   #two {
     margin-top: 13em;
+<<<<<<< HEAD
     background: $lightgrey;
+=======
+>>>>>>> 1831a5c80edeb77c70b221e7a56dffc9241a4ff2
   }
   
   #controlls .timer {
@@ -91,6 +149,7 @@ button#loading2 {
     align-items: center;
   }
   
+<<<<<<< HEAD
   
   #controlls #interval {
     padding: .5em 1.5em;
@@ -100,19 +159,26 @@ button#loading2 {
     cursor: pointer;
   }
   
+=======
+>>>>>>> 1831a5c80edeb77c70b221e7a56dffc9241a4ff2
   .timer span {
     font-size: 1.3em;
     opacity: .7;
   }
   
   .display-remain-time {
+<<<<<<< HEAD
     font-family: 'PT Sans', sans-serif;
+=======
+    font-family: 'Roboto';
+>>>>>>> 1831a5c80edeb77c70b221e7a56dffc9241a4ff2
     font-weight: 100;
     font-size: 65px;
     color: #444;
   }
   
   #pause {
+<<<<<<< HEAD
     font-size: 24px;
     font-weight: 700;
     font-family: 'PT Sans', sans-serif;
@@ -132,6 +198,42 @@ button#loading2 {
   }
   
   .pause::after {
+=======
+    cursor: pointer;
+    font-size: 1em;
+    border: 1px solid #0f0f0f;
+    padding: .1em .5em;
+    /* outline: none;
+    background: transparent;
+    border: none; */
+    /* margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    position: relative; */
+  }
+  
+  .play::before {
+    /* display: block; */
+    content: "";
+    /* position: absolute; */
+    /* top: 12em;
+    left: 16px;  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 22px solid #080808; */
+  }
+  
+  .pause::after {
+    content: "";
+    /* position: absolute;
+    top: 12em;
+    left: 12px;
+    width: 15px;
+    height: 30px; */
+>>>>>>> 1831a5c80edeb77c70b221e7a56dffc9241a4ff2
     background-color: transparent;
     border-radius: 1px;
     border: 5px solid #0f0f0f;
@@ -140,41 +242,66 @@ button#loading2 {
   }
   
   #pause:hover {
+<<<<<<< HEAD
     opacity: 0.5;
+=======
+    opacity: 0.8;
+>>>>>>> 1831a5c80edeb77c70b221e7a56dffc9241a4ff2
   }
   
   .e-c-base {
     fill: none;
+<<<<<<< HEAD
     stroke: $darkgrey;
+=======
+    stroke: #dd3232;
+>>>>>>> 1831a5c80edeb77c70b221e7a56dffc9241a4ff2
     stroke-width: 4px
   }
   
   .e-c-progress {
     fill: none;
+<<<<<<< HEAD
+=======
+    stroke: #131212;
+>>>>>>> 1831a5c80edeb77c70b221e7a56dffc9241a4ff2
     stroke-width: 4px;
     transition: stroke-dashoffset 0.7s;
   }
   
   .e-c-pointer {
+<<<<<<< HEAD
     fill: $black;
     // stroke: #f7f4f4;
     stroke: $black;
+=======
+    fill: rgb(24, 23, 23);
+    stroke: #f1eeee;
+>>>>>>> 1831a5c80edeb77c70b221e7a56dffc9241a4ff2
     stroke-width: 2px;
   }
   
   #e-pointer {
     transition: transform 0.7s;
   }
+<<<<<<< HEAD
   
   /* Pages style---------------- */
   
   * {
+=======
+
+  /* Pages style---------------- */
+
+* {
+>>>>>>> 1831a5c80edeb77c70b221e7a56dffc9241a4ff2
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
   #one {
+<<<<<<< HEAD
     background: $black;
     min-width: 100vh;
     min-height: 100vh;
@@ -183,6 +310,15 @@ button#loading2 {
   
   #one #img {
     margin: 20em auto auto 35%;
+=======
+    background: #111;
+    min-width: 100vh;
+    min-height: 100vh;
+  }
+  
+  #one #img {
+    margin: 20em auto auto 45%;
+>>>>>>> 1831a5c80edeb77c70b221e7a56dffc9241a4ff2
     cursor: pointer;
     position: absolute;
   }
@@ -201,16 +337,22 @@ button#loading2 {
     animation-timing-function: ease-in-out;
   }
   
+<<<<<<< HEAD
 #tre {
     background: $lightgrey;
 }
 
+=======
+>>>>>>> 1831a5c80edeb77c70b221e7a56dffc9241a4ff2
   #tre img {
     margin: 1.7em 0 3.3em 2em;
   }
   
   ul {
+<<<<<<< HEAD
     position: absolute;
+=======
+>>>>>>> 1831a5c80edeb77c70b221e7a56dffc9241a4ff2
     margin-left: 2em;
   }
   
@@ -225,6 +367,7 @@ button#loading2 {
     opacity: .5;
   }
   
+<<<<<<< HEAD
   #four button {
     display: flex;
     justify-content: center;
@@ -241,12 +384,21 @@ button#loading2 {
     font-size: 16px;
     font-weight: 700;
     line-height: 20,72px;
+=======
+  #four button{
+    /* display: flex;
+    justify-content: center;
+    align-items: flex-end; */
+    position: absolute;
+    /* margin-top: 9em; */
+>>>>>>> 1831a5c80edeb77c70b221e7a56dffc9241a4ff2
   }
   
   #four img {
     margin: 1.7em 0 3.3em 2em;
   }
   
+<<<<<<< HEAD
   #six {
     width: 100%;
     height: 100vh;
@@ -265,6 +417,8 @@ button#loading2 {
     }
   }
   
+=======
+>>>>>>> 1831a5c80edeb77c70b221e7a56dffc9241a4ff2
   @keyframes alarm {
     from {
       transform: rotate(0);
@@ -272,6 +426,7 @@ button#loading2 {
     to {
       transform: rotate(30deg);
     }
+<<<<<<< HEAD
   }
 =======
 @import "body";
@@ -352,3 +507,6 @@ button[data-setter] {
   transition: transform 0.7s;
 }
 >>>>>>> .merge_file_a08716
+=======
+  }
+>>>>>>> 1831a5c80edeb77c70b221e7a56dffc9241a4ff2
