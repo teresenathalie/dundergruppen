@@ -2,6 +2,7 @@
 let progressBar = document.querySelector('.e-c-progress');
 let indicator = document.getElementById('e-indicator');
 let pointer = document.getElementById('e-pointer');
+let background = document.getElementById('six');
 let length = Math.PI * 2 * 100;
 
 progressBar.style.strokeDasharray = length;
@@ -10,6 +11,7 @@ function update(value, timePercent) {
   var offset = - length - length * value / (timePercent);
   progressBar.style.strokeDashoffset = offset; 
   pointer.style.transform = `rotate(${-360 * value / (timePercent)}deg)`; 
+  background.style.transform = `rotatex(${180 * value / (timePercent)}deg)`; 
 };
 
 //circle ends
