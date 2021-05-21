@@ -188,7 +188,6 @@ li:hover {
   width: 100%;
   height: 100vh;
   background: rgb(235, 10, 10);
-  transition: width 2s, height 4s;
 }
 
 #six button {

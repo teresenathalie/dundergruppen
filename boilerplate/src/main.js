@@ -11,7 +11,7 @@ function update(value, timePercent) {
   var offset = - length - length * value / (timePercent);
   progressBar.style.strokeDashoffset = offset; 
   pointer.style.transform = `rotate(${-360 * value / (timePercent)}deg)`; 
-  background.style.transform = `rotatex(${180 * value / (timePercent)}deg)`; 
+  background.style.transform = `rotatex(${100 * value / (timePercent)}deg)`; 
 };
 
 //circle ends
