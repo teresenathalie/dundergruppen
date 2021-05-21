@@ -1,0 +1,12 @@
+#msg{
+    background: #333;
+    color:aliceblue;
+    opacity: 0;
+    border: 1px solid #333;
+    padding: 3em;
+    margin: 13em;
+}
+
+#msg.show{
+opacity: 1;
+}
