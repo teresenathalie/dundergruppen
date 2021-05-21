@@ -126,29 +126,33 @@ function displayTimeLeft (timeLeft){ //displays time on the input
 }
 pauseBtn.addEventListener('click',pauseTimer);
 
-
+let sidebar = false;
+function showSidebar (){
+  return !sidebar;
+}
 // meny show and close 
   document.getElementById("meny").style.display = "none";
-function w3_open() {
-  if(true){ 
-  document.getElementById('pause').style.border = "none";
-  document.getElementById('pause').style.fontSize = '1.5em';
-  document.getElementById('pause').style.padding = '0';
-  document.getElementById("mySidebar").style.display = "block";
+function openMeny() {
+  // document.getElementById("sidebar").style.display = "block";
   document.getElementById("meny").style.display = "block";
-  }
+  
 }
 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
+function closeMeny() {
+  document.getElementById("sidebar").style.display = "none";
 }
 
-//Show page one(loading)
- document.getElementById("bFour").addEventListener('click', ()=>{
+//from page4 till home(loading)
+ document.getElementById("loading1").addEventListener('click', ()=>{
   document.getElementById('four').style.display= 'none';
   document.getElementById('one').style.display= 'block';
   location.reload()
-  
+})
+//from page5 till home(loading)
+document.getElementById("loading2").addEventListener('click', ()=>{
+  document.getElementById('five').style.display= 'none';
+  document.getElementById('one').style.display= 'block';
+  location.reload()
 })
 
 //Show page two (sitTimer)
@@ -159,28 +163,30 @@ function w3_close() {
 })
 
 //Show page tree(menu)
-  document.getElementById('interval').addEventListener('click', ()=>{
+  document.querySelector('.interval').addEventListener('click', ()=>{
   document.getElementById('two').style.display= 'none';
   document.getElementById('tre').style.display= 'block';
   document.getElementById('inp').style.display= 'none';
   document.getElementById('controlls').style.display= 'none';
-})
+  document.getElementById('five').style.display= 'block';
+ })
 
 //Show page four(tiditalTimer)
 document.querySelector('.digital').addEventListener('click', ()=>{
   document.getElementById('tre').style.display= 'none';
   document.getElementById('four').style.display= 'block';
-  document.getElementById('inp').style.display= 'none';
   document.getElementById('controlls').style.display= 'block';
+  document.getElementById('six').style.display= 'none';
+  document.getElementById('five').style.display= 'none';
 })
 
-//Show page five(analogTimer)
-  document.querySelector('.analog').addEventListener('click', ()=>{
-  document.getElementById('tre').style.display= 'none';
-  document.getElementById('four').style.display= 'block';
-  document.getElementById('inp').style.display= 'none';
-  document.getElementById('controlls').style.display= 'block';
+//Show page five(visualTimer)
+document.querySelector('.visual').addEventListener('click', ()=>{
+  document.getElementById('five').style.display= 'none';
+  document.getElementById('six').style.display= 'block';
+  
 })
+
 
 
 
