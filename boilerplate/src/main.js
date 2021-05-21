@@ -2,6 +2,7 @@
 let progressBar = document.querySelector('.e-c-progress');
 let indicator = document.getElementById('e-indicator');
 let pointer = document.getElementById('e-pointer');
+let background = document.getElementById('six');
 let length = Math.PI * 2 * 100;
 
 progressBar.style.strokeDasharray = length;
@@ -9,7 +10,8 @@ progressBar.style.strokeDasharray = length;
 function update(value, timePercent) {
   var offset = - length - length * value / (timePercent);
   progressBar.style.strokeDashoffset = offset; 
-  pointer.style.transform = `rotate(${360 * value / (timePercent)}deg)`; 
+  pointer.style.transform = `rotate(${-360 * value / (timePercent)}deg)`; 
+  background.style.transform = `rotatex(${180 * value / (timePercent)}deg)`; 
 };
 
 //circle ends
@@ -77,6 +79,8 @@ function timer (seconds){ //counts time, takes seconds
       document.getElementById('two').style.display= 'none';
       document.getElementById('tre').style.display= 'none';
       document.getElementById('four').style.display= 'none';
+      document.getElementById('five').style.display= 'none';
+      document.getElementById('six').style.display= 'none';
       document.getElementById('controlls').style.display= 'none';
       document.getElementById("ljud").play();
 
@@ -126,41 +130,73 @@ function displayTimeLeft (timeLeft){ //displays time on the input
 }
 pauseBtn.addEventListener('click',pauseTimer);
 
-
+let sidebar = false;
+function showSidebar (){
+  return !sidebar;
+}
 // meny show and close 
-document.getElementById("meny").style.display = "none";
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("meny").style.display = "none";
+function openMeny() {
+  // document.getElementById("sidebar").style.display = "block";
   document.getElementById("meny").style.display = "block";
+  
 }
 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
+function closeMeny() {
+  document.getElementById("sidebar").style.display = "none";
 }
 
-//Show page two 
-document.getElementById('img').addEventListener('click', ()=>{
+//from page4 till home(loading)
+ document.getElementById("home").addEventListener('click', ()=>{
+  document.getElementById('four').style.display= 'none';
+  document.getElementById('one').style.display= 'block';
+  location.reload()
+})
+//from page5 till home(loading)
+document.getElementById("loading2").addEventListener('click', ()=>{
+  document.getElementById('five').style.display= 'none';
+  document.getElementById('one').style.display= 'block';
+  location.reload()
+})
+//from page6 till home(loading)
+document.getElementById("loading3").addEventListener('click', ()=>{
+  document.getElementById('six').style.display= 'none';
+  document.getElementById('one').style.display= 'block';
+  location.reload()
+})
+
+//Show page two (sitTimer)
+ document.getElementById('img').addEventListener('click', ()=>{
  document.getElementById('one').style.display= 'none';
  document.getElementById('two').style.display= 'block';
  document.getElementById('controlls').style.display= 'block';
 })
 
-//Show page tree
-document.getElementById('interval').addEventListener('click', ()=>{
+//Show page tree(menu)
+  document.querySelector('.interval').addEventListener('click', ()=>{
   document.getElementById('two').style.display= 'none';
   document.getElementById('tre').style.display= 'block';
   document.getElementById('inp').style.display= 'none';
   document.getElementById('controlls').style.display= 'none';
-})
+  document.getElementById('five').style.display= 'block';
+ })
 
- 
-//Show page four
+//Show page four(tiditalTimer)
 document.querySelector('.digital').addEventListener('click', ()=>{
   document.getElementById('tre').style.display= 'none';
   document.getElementById('four').style.display= 'block';
-   document.getElementById('inp').style.display= 'none';
-   document.getElementById('controlls').style.display= 'block';
+  document.getElementById('controlls').style.display= 'block';
+  document.getElementById('five').style.display= 'none';
 })
+
+//Show page five(visualTimer)
+document.querySelector('.visual').addEventListener('click', ()=>{
+  document.getElementById('tre').style.display= 'none';
+  document.getElementById('five').style.display= 'none';
+  document.getElementById('six').style.display= 'block';
+})
+
+
 
 
 
