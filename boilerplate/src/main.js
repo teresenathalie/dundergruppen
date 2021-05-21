@@ -9,7 +9,7 @@ progressBar.style.strokeDasharray = length;
 function update(value, timePercent) {
   var offset = - length - length * value / (timePercent);
   progressBar.style.strokeDashoffset = offset; 
-  pointer.style.transform = `rotate(${360 * value / (timePercent)}deg)`; 
+  pointer.style.transform = `rotate(${-360 * value / (timePercent)}deg)`; 
 };
 
 //circle ends
@@ -20,7 +20,7 @@ const setterBtns = document.querySelectorAll('button[data-setter]');
 
 let intervalTimer;
 let timeLeft;
-let wholeTime = 0.5 * 100; // manage this to set the whole time 
+let wholeTime = 0.5 * 20; // manage this to set the whole time 
 let isPaused = false;
 let isStarted = false;
 
@@ -77,6 +77,8 @@ function timer (seconds){ //counts time, takes seconds
       document.getElementById('two').style.display= 'none';
       document.getElementById('tre').style.display= 'none';
       document.getElementById('four').style.display= 'none';
+      document.getElementById('five').style.display= 'none';
+      document.getElementById('six').style.display= 'none';
       document.getElementById('controlls').style.display= 'none';
       document.getElementById("ljud").play();
 
@@ -143,7 +145,7 @@ function closeMeny() {
 }
 
 //from page4 till home(loading)
- document.getElementById("loading1").addEventListener('click', ()=>{
+ document.getElementById("home").addEventListener('click', ()=>{
   document.getElementById('four').style.display= 'none';
   document.getElementById('one').style.display= 'block';
   location.reload()
@@ -151,6 +153,12 @@ function closeMeny() {
 //from page5 till home(loading)
 document.getElementById("loading2").addEventListener('click', ()=>{
   document.getElementById('five').style.display= 'none';
+  document.getElementById('one').style.display= 'block';
+  location.reload()
+})
+//from page6 till home(loading)
+document.getElementById("loading3").addEventListener('click', ()=>{
+  document.getElementById('six').style.display= 'none';
   document.getElementById('one').style.display= 'block';
   location.reload()
 })
@@ -176,16 +184,16 @@ document.querySelector('.digital').addEventListener('click', ()=>{
   document.getElementById('tre').style.display= 'none';
   document.getElementById('four').style.display= 'block';
   document.getElementById('controlls').style.display= 'block';
-  document.getElementById('six').style.display= 'none';
   document.getElementById('five').style.display= 'none';
 })
 
 //Show page five(visualTimer)
 document.querySelector('.visual').addEventListener('click', ()=>{
+  document.getElementById('tre').style.display= 'none';
   document.getElementById('five').style.display= 'none';
   document.getElementById('six').style.display= 'block';
-  
 })
+
 
 
 

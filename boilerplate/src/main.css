@@ -46,6 +46,7 @@ button[data-setter]:hover {
   align-items: center;
 }
 
+
 #controlls #interval {
   padding: .5em 1.5em;
   font-size: 1em;
@@ -93,20 +94,19 @@ button[data-setter]:hover {
 
 .e-c-base {
   fill: none;
-  stroke: #0e0d0d;
+  stroke: #ebe7e7;
   stroke-width: 4px
 }
 
 .e-c-progress {
   fill: none;
-  stroke: #dfdcdc;
   stroke-width: 4px;
   transition: stroke-dashoffset 0.7s;
 }
 
 .e-c-pointer {
-  fill: rgb(24, 23, 23);
-  stroke: #f1eeee;
+  fill: rgb(235, 10, 10);
+  stroke: #f7f4f4;
   stroke-width: 2px;
 }
 
@@ -182,6 +182,29 @@ li:hover {
 
 #four img {
   margin: 1.7em 0 3.3em 2em;
+}
+
+#six {
+  width: 100%;
+  height: 10px;
+  background: rgb(235, 10, 10);
+  transition: width 2s, height 4s;
+}
+
+#six:hover {
+  height: 100vh;
+}
+
+#six button {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  padding: 1em 2.3em;
+  font-size: 1em;
+  font-weight: 600;
 }
 
 @keyframes alarm {
