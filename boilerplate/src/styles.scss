@@ -27,6 +27,213 @@ $radiusCheckbox: 3px;
 $radiusBigbutton: 5px;
 $radiusSmallbutton: 2px;
 
+button[data-setter] {
+    outline: none;
+    background: transparent;
+    border: none;
+    font-family: 'Roboto';
+    font-weight: 900;
+    font-size: 3em;
+    color: #222;
+    cursor: pointer;
+    /* width: 25px;
+    height: 30px; */
+  }
+  
+  button[data-setter]:hover {
+    opacity: 0.5;
+  }
+  
+  /* 
+  .setters {
+    position: absolute;
+    left: 85px;
+    top: 75px;
+  } */
+  
+  /* 
+  .minutes-set {
+    float: left;
+    margin-right: 28px;
+  } */
+  
+  #circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    /* position: relative; */
+  }
+  
+  .seconds-set {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+  }
+  
+  #two {
+    margin-top: 13em;
+  }
+  
+  #controlls .timer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .timer span {
+    font-size: 1.3em;
+    opacity: .7;
+  }
+  
+  .display-remain-time {
+    font-family: 'Roboto';
+    font-weight: 100;
+    font-size: 65px;
+    color: #444;
+  }
+  
+  #pause {
+    cursor: pointer;
+    font-size: 1em;
+    border: 1px solid #0f0f0f;
+    padding: .1em .5em;
+    /* outline: none;
+    background: transparent;
+    border: none; */
+    /* margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    position: relative; */
+  }
+  
+  .play::before {
+    /* display: block; */
+    content: "";
+    /* position: absolute; */
+    /* top: 12em;
+    left: 16px;  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 22px solid #080808; */
+  }
+  
+  .pause::after {
+    content: "";
+    /* position: absolute;
+    top: 12em;
+    left: 12px;
+    width: 15px;
+    height: 30px; */
+    background-color: transparent;
+    border-radius: 1px;
+    border: 5px solid #0f0f0f;
+    border-top: none;
+    border-bottom: none;
+  }
+  
+  #pause:hover {
+    opacity: 0.8;
+  }
+  
+  .e-c-base {
+    fill: none;
+    stroke: #dd3232;
+    stroke-width: 4px
+  }
+  
+  .e-c-progress {
+    fill: none;
+    stroke: #131212;
+    stroke-width: 4px;
+    transition: stroke-dashoffset 0.7s;
+  }
+  
+  .e-c-pointer {
+    fill: rgb(24, 23, 23);
+    stroke: #f1eeee;
+    stroke-width: 2px;
+  }
+  
+  #e-pointer {
+    transition: transform 0.7s;
+  }
 
+  /* Pages style---------------- */
 
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  #one {
+    background: #111;
+    min-width: 100vh;
+    min-height: 100vh;
+  }
+  
+  #one #img {
+    margin: 20em auto auto 45%;
+    cursor: pointer;
+    position: absolute;
+  }
+  
+  #alarm {
+    background: #111;
+    min-width: 50vh;
+    min-height: 50vh;
+    width: 100%;
+    height: 100%;
+  }
+  
+  #alarm img {
+    margin: 10% 38%;
+    animation: alarm .3s infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  #tre img {
+    margin: 1.7em 0 3.3em 2em;
+  }
+  
+  ul {
+    margin-left: 2em;
+  }
+  
+  li {
+    list-style: none;
+    font-size: 1.5em;
+    padding: 1em 0;
+    cursor: pointer;
+  }
+  
+  li:hover {
+    opacity: .5;
+  }
+  
+  #four button{
+    /* display: flex;
+    justify-content: center;
+    align-items: flex-end; */
+    position: absolute;
+    /* margin-top: 9em; */
+  }
+  
+  #four img {
+    margin: 1.7em 0 3.3em 2em;
+  }
+  
+  @keyframes alarm {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(30deg);
+    }
+  }
