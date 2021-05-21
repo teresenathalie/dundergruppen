@@ -3,12 +3,12 @@ let progressBar: any= document.querySelector('.e-c-progress');
 let indicator = document.getElementById('e-indicator');
 let pointer: any = document.getElementById('e-pointer');
 let background: any = document.getElementById('six');
-let lng:number =  Math.PI * 2 * 100;
+let length:number =  Math.PI * 2 * 100;
 
-progressBar.style.strokeDasharray  = lng;
+progressBar.style.strokeDasharray  = length;
 
 function update(value:number, timePercent:number): void{
-  var offset = - lng - lng * value / (timePercent);
+  var offset = - length - length * value / (timePercent);
   progressBar.style.strokeDashoffset = offset; 
   pointer.style.transform = `rotate(${-360 * value / (timePercent)}deg)`; 
   background.style.transform = `rotatex(${180 * value / (timePercent)}deg)`; 
