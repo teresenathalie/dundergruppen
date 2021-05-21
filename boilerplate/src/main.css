@@ -125,7 +125,7 @@ button[data-setter]:hover {
 #one {
   background: #111;
   min-width: 100vh;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 #one #img {
