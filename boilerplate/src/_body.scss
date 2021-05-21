@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+
+:root {
+  font-family: "PT Sans", sans-serif;
+}
+
+$borderColor: rgb(190, 186, 186);
+
+body {
+  margin: 5% 24%;
+  border: 1px solid $borderColor;
+  width: 370px;
+  height: 560px;
+  outline: solid $borderColor;
+}
+
+@keyframes alarm {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(30deg);
+  }
+}

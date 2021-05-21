@@ -1,14 +1,14 @@
 // //circle start
-let progressBar: any= document.querySelector('.e-c-progress');
+const progressBar = document.querySelector('.e-c-progress');
 let indicator = document.getElementById('e-indicator');
-let pointer: any = document.getElementById('e-pointer');
-let background: any = document.getElementById('six');
-let lng:number =  Math.PI * 2 * 100;
+let pointer = document.getElementById('e-pointer');
+let background = document.getElementById('six');
+let length = Math.PI * 2 * 100;
 
-progressBar.style.strokeDasharray  = lng;
+progressBar.style.strokeDasharray = length;
 
-function update(value:number, timePercent:number): void{
-  var offset = - lng - lng * value / (timePercent);
+function update(value, timePercent) {
+  var offset = - length - length * value / (timePercent);
   progressBar.style.strokeDashoffset = offset; 
   pointer.style.transform = `rotate(${-360 * value / (timePercent)}deg)`; 
   background.style.transform = `rotatex(${180 * value / (timePercent)}deg)`; 
@@ -17,11 +17,11 @@ function update(value:number, timePercent:number): void{
 //circle ends
 const displayOutput = document.querySelector('.display-remain-time')
 const pauseBtn = document.getElementById('pause');
-const setterBtns: any = document.querySelectorAll('button[data-setter]');
+const setterBtns = document.querySelectorAll('button[data-setter]');
 
 
-let intervalTimer: any;
-let timeLeft:number;
+let intervalTimer;
+let timeLeft;
 let wholeTime = 0.5 * 20; // manage this to set the whole time 
 let isPaused = false;
 let isStarted = false;
@@ -34,7 +34,7 @@ let isStarted = false;
 update(wholeTime,wholeTime); //refreshes progress bar
 displayTimeLeft(wholeTime);
 
-function changeWholeTime(seconds: number){
+function changeWholeTime(seconds){
   if ((wholeTime + seconds) > 0){
     wholeTime += seconds;
     update(wholeTime,wholeTime);
@@ -42,8 +42,8 @@ function changeWholeTime(seconds: number){
 }
 
 for (var i = 0; i < setterBtns.length; i++) {
-    setterBtns[i].addEventListener("click", function(event: Event) {
-        var param:Event = this.dataset.setter 
+    setterBtns[i].addEventListener("click", function(event) {
+        var param = this.dataset.setter;
         switch (param) {
             case 'minutes-plus':
                 changeWholeTime(1 * 60);
