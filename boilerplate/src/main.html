@@ -30,52 +30,54 @@
 
   <!-- Page tree (menu) -->
   <section id="tre" style="display: none">
-    <div onclick="w3_open()">
-      <img src="./img/meny.svg" alt="meny" />
+    <div onclick="openMeny()">
+      <img src="./img/meny.svg" alt="m" class="menu"/>
     </div>
 
-    <article id="mySidebar">
-      <ul onclick="w3_close()" id="meny">
-        <li class="digital" id="pause">Digital timer</li>
-        <li id="analog">Analog timer</li>
-        <li id="visual">Visual timer</li>
+    <article id="sidebar">
+      <ul onclick="closeMeny()" id="meny">
+        <li class="digital">Digital timer</li>
+        <li class="analog">Analog timer</li>
+        <li class="visual">Visual timer</li>
       </ul>
     </article>
   </section>
 
   <!-- Page four (digitalTimer)-->
   <section id="four" style="display: none">
-    <img src="./img/meny.svg" alt="meny" />
-<<<<<<< HEAD
-    <button id="four">Abort timer</button>
-=======
     <button id="bFour">Abort timer</button>
->>>>>>> 0c53fd9be4a884308efac3d1e864b49a9a97483d
+
+    <img src="./img/meny.svg" alt="m" />
+    <button id="home">Abort timer</button>
+
   </section>
 
   
     <!-- Page five (analogTimer) -->
-    <div id="circle" style="display: none">
-      <svg width="300" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+    <section id="five" style="display: none;">
+    <div id="circle" >
+      <svg width="300" viewBox="0 0 220 220">
         <g transform="translate(110,110)">
           <circle r="100" class="e-c-base" />
           <g transform="rotate(-90)">
             <circle r="100" class="e-c-progress" />
-
             <g id="e-pointer">
-              <circle cx="100" cy="0" r="8" class="e-c-pointer" />
+              <circle cx="100" cy="0" r="6" class="e-c-pointer" />
             </g>
           </g>
         </g>
       </svg>
+      <button id="loading2">Abort timer</button>
     </div>
+  </section>
 
   <!--sitTimer(del-2) on page two-->
   <section id="controlls" style="display: none">
     <section class="timer">
       <div class="display-remain-time">00:30</div>
       <div id="inp">
-        <span>Minutes</span>
+        <br>
+          <span>Minutes</span>
         <br />
         <br />
         <article>
@@ -83,19 +85,21 @@
             <input type="checkbox" />
             <span>intervals</span>
           </aside>
-          <aside>
+                   <aside>
             <input type="checkbox" />
             <span>5 min break/interval</span>
           </aside>
         </article>
         <br /><br />
-        <button id='interval'>START TIMER</button>
+        <button class='interval' id="pause">START TIMER</button>
       </div>
+    </div>
     </section>
+  </section>
 
-  <!-- Page sex (visualTimer)-->
-  <section>
-
+  <!-- Page six (visualTimer)-->
+  <section id="six" style="display: none">
+      <button id="loading3">Abort timer</button>
   </section>
     
   <!-- Page seven (viewAlarm)-->
